@@ -48,6 +48,12 @@ export XIAOHONGSHU_API_KEY=你的密钥
 python crawl_today_with_api.py
 ```
 
+6. **生成深度分析报告**（需要claude code）
+```bash
+claude
+/analyze_hotsearch output/20250917/0346/
+```
+
 ## 📁 项目结构
 
 ```
