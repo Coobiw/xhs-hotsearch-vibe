@@ -1,0 +1,76 @@
+# 小红书热搜爬虫配置
+
+# 爬虫配置
+crawler:
+  # 热搜接口地址
+  hot_search_url: "https://www.xiaohongshu.com/discovery/hot-search/list"
+  # 请求超时时间（秒）
+  timeout: 30
+  # 重试次数
+  max_retries: 3
+  # 请求间隔时间（秒）
+  request_delay: 3
+  # 用户代理字符串
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+
+# 反爬配置
+anti_bot:
+  # 是否启用代理
+  use_proxy: false
+  # 代理列表
+  proxies: []
+  # 是否启用浏览器自动化兜底
+  use_playwright: true
+  # 浏览器类型
+  browser_type: "chromium"
+  # 是否无头模式
+  headless: true
+
+# 数据存储
+data:
+  # 数据保存目录
+  data_dir: "data"
+  # 输出目录
+  output_dir: "output"
+  # 数据文件格式
+  format: "json"
+  # 是否保存原始HTML
+  save_html: false
+
+# 日志配置
+logging:
+  # 日志级别
+  level: "INFO"
+  # 日志文件
+  log_file: "logs/xiaohongshu_crawler.log"
+  # 是否启用控制台日志
+  console: true
+
+# 热搜配置
+hot_search:
+  # 获取热搜数量
+  limit: 50
+  # 热搜类型
+  type: "all"  # all, video, note
+  # 排序方式
+  sort_by: "heat"  # heat, time
+
+# 分析配置
+analysis:
+  # 是否启用情感分析
+  sentiment_analysis: false
+  # 关键词提取
+  keyword_extraction: true
+  # 分类标签
+  enable_categorization: true
+
+# 报告配置
+report:
+  # 报告模板
+  template: "default"
+  # 是否生成HTML报告
+  generate_html: true
+  # 报告标题
+  title: "小红书每日热搜分析报告"
+  # 报告样式
+  style: "modern"  # modern, simple, classic

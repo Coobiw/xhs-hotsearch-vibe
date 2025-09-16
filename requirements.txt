@@ -1,0 +1,25 @@
+# 基础依赖
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+fake-useragent>=1.4.0
+
+# 浏览器自动化
+playwright>=1.40.0
+
+# 数据处理和验证
+pydantic>=2.5.0
+python-dateutil>=2.8.0
+
+# 日志和配置
+loguru>=0.7.0
+pyyaml>=6.0.0
+
+# 验证码识别（可选）
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# 开发工具
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0

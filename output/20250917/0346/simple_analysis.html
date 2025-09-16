@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书热搜分析报告 - 2025年09月17日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #74b9ff, #0984e3);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #ff6b6b;
+        }
+        
+        .section h2 {
+            color: #2d3436;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ff6b6b;
+            padding-bottom: 10px;
+        }
+        
+        .hot-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .hot-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #ff6b6b;
+            transition: all 0.3s ease;
+        }
+        
+        .hot-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .hot-item .rank {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .hot-item .word {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2d3436;
+            margin-bottom: 8px;
+        }
+        
+        .hot-item .meta {
+            color: #636e72;
+            font-size: 0.9em;
+        }
+        
+        .hot-item .heat {
+            color: #e17055;
+            font-weight: bold;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: #74b9ff;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            background: #2d3436;
+            color: white;
+            border-radius: 15px;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔥 小红书热搜分析报告</h1>
+            <p>2025年09月17日 03:46</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>20</h3>
+                <p>热搜词条总数</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>0</h3>
+                <p>最高热度</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>0</h3>
+                <p>平均热度</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>5</h3>
+                <p>分类数量</p>
+            </div>
+        
+        </div>
+        
+        <div class="section">
+            <h2>📈 今日热搜榜 TOP 20</h2>
+            <div class="hot-list">
+    
+                <div class="hot-item">
+                    <span class="rank">1</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">打工人必学的0科技预制菜<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">2</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">前奏一响 毛利兰请你平躺<span class='category-tag'>梗</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">3</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">其实我女儿是一种台风<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">4</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">小米17 Pro官宣背屏设计<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">5</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">这季花少叫赐婚季算了<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">6</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">高校学费集体上涨<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">7</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">它只是只小狗 它能撒谎吗<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">8</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">iOS 26让普通照片秒变3D照<span class='category-tag'>新</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">9</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">王乐晨卢远 年龄差带来的张力<span class='category-tag'>热</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">10</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">我妈退休2年后去欧洲留学了<span class='category-tag'>热</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">11</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">正宗猫山王榴莲<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">12</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">你怎么知道白敬亭对着我唱歌了<span class='category-tag'>热</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">13</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">女生癌症晚期选择环球硬核旅行<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">14</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">没有舞蹈天赋 那就反复跳<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">15</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">墙绘也有裸眼3D版了<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">16</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">俄乌冲突谈判进程陷入暂停<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">17</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">赴山海抽象演绎大赛开启<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">18</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">人大刚子的粉丝数超过了人大官方<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">19</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">罗永浩回应华与华被质疑<span class='category-tag'>无</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hot-item">
+                    <span class="rank">20</span>
+                    <div style="display: inline-block; vertical-align: middle;">
+                        <div class="word">70岁的我得到陈冲的鼓励<span class='category-tag'>独家</span></div>
+                        <div class="meta">
+                            
+                            <span style="margin-left: 15px;">📅 03:46</span>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        
+        
+        <div class="section">
+            <h2>📊 数据分析</h2>
+            
+            <div class="chart-container">
+                <h3>热度统计</h3>
+                <ul>
+                    <li>平均热度: 0</li>
+                    <li>最高热度: 0</li>
+                    <li>最低热度: 0</li>
+                    <li>中位数热度: 0</li>
+                </ul>
+            </div>
+            
+            <div class="chart-container">
+                <h3>分类分布</h3>
+                <ul>
+        <li>无: 14 个词条</li><li>梗: 1 个词条</li><li>新: 1 个词条</li><li>热: 3 个词条</li><li>独家: 1 个词条</li>
+                </ul>
+            </div>
+            
+            <div class="chart-container">
+                <h3>热门关键词</h3>
+                <p>平均词条长度: 11.9 个字符</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>📊 报告生成时间: 2025-09-17 03:46:38</p>
+            <p>🤖 由小红书热搜爬虫自动生成</p>
+        </div>
+    </div>
+</body>
+</html>
