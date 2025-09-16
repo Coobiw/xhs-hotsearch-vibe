@@ -292,9 +292,11 @@ def _generate_html_content(result: HotSearchResult, analysis_result: Optional[Di
     for item in result.get_top_n(20):
         heat_info = f"🔥 热度: {item.heat:,}" if item.heat > 0 else ""
         category_tag = f"<span class='category-tag'>{item.category}</span>" if hasattr(item, 'category') and item.category else ""
+        # 构建小红书搜索URL
+        search_url = f"https://www.xiaohongshu.com/search_result?keyword={item.word}"
         
         html_template += f"""
-                <div class="hot-item">
+                <div class="hot-item" onclick="window.open('{search_url}', '_blank')" style="cursor: pointer;">
                     <span class="rank">{item.rank}</span>
                     <div style="display: inline-block; vertical-align: middle;">
                         <div class="word">{item.word}{category_tag}</div>

@@ -116,16 +116,22 @@ class XiaohongshuApiCrawler:
             if not heat_str:
                 return 0
             
-            # 处理类似"1100.9w"的格式
+            # 处理类似"1100.9万"或"1100.9w"的格式
             heat_str = heat_str.lower().strip()
-            if 'w' in heat_str:
-                num_str = heat_str.replace('w', '')
+            
+            # 移除可能的空格和逗号
+            heat_str = heat_str.replace(' ', '').replace(',', '')
+            
+            if '万' in heat_str or 'w' in heat_str:
+                # 处理中文"万"和英文"w"
+                num_str = heat_str.replace('万', '').replace('w', '')
                 return int(float(num_str) * 10000)
-            elif 'k' in heat_str:
-                num_str = heat_str.replace('k', '')
+            elif '千' in heat_str or 'k' in heat_str:
+                # 处理中文"千"和英文"k"
+                num_str = heat_str.replace('千', '').replace('k', '')
                 return int(float(num_str) * 1000)
             else:
-                # 纯数字
+                # 纯数字，可能是已经转换过的
                 return int(float(heat_str))
                 
         except (ValueError, TypeError):
